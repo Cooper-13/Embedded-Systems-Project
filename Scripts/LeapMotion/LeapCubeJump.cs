@@ -21,10 +21,16 @@ public class LeapCubeJump : MonoBehaviour
         {
             Hand firstHand = frame.Hands[0];
 
+            // Option 1: Detect a Grab Gesture
             if ((firstHand.PinchStrength > 0.8f || firstHand.GrabStrength > 0.8f) && isGrounded)
             {
                 Jump();
             }
+            // Option 2: Detect a Palm Upward Gesture
+            // if (firstHand.PalmPosition.y > 200 && isGrounded) // Adjust thresholds as needed
+            // {
+            //     Jump();
+            // }
         }
     }
 
