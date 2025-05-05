@@ -13,6 +13,8 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
+		public bool rotateLeft;
+		public bool rotateRight;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -22,6 +24,8 @@ namespace StarterAssets
 		public bool cursorInputForLook = true;
 
 		private LeapServiceProvider _leapServiceProvider;
+		private bool leapMotionJump = false; // Tracks Leap Motion jump state
+        private bool spacebarJump = false;   // Tracks spacebar jump state
 
 		private void Awake()
         {
@@ -32,17 +36,27 @@ namespace StarterAssets
             {
                 Debug.LogError("Leap Motion Provider not found. Ensure Leap Motion is set up in the scene.");
             }
+			
         }
 
         private void Update()
         {
             // Check for hand gesture to trigger jump
-            CheckLeapMotionGesture();
+			if (_leapServiceProvider != null && _leapServiceProvider.IsConnected()) {
+				CheckLeapMotionGesture();
+			} else {
+				leapMotionJump = false;
+			}
+
+			jump = leapMotionJump || spacebarJump;
+            
         }
 
         private void CheckLeapMotionGesture()
         {
-            if (_leapServiceProvider == null) return;
+            // if (_leapServiceProvider == null) return;
+
+			// if(!_leapServiceProvider.IsConnected()) return;
 
             // Get the current frame from the Leap Motion controller
             Frame frame = _leapServiceProvider.CurrentFrame;
@@ -55,17 +69,13 @@ namespace StarterAssets
                 // Example gesture: Check if the hand is gripped
                 if (firstHand.GrabStrength > 0.8f) // Adjust thresholds as needed
                 {
-                    JumpInput(true); // Trigger jump
-                }
-                else
-                {
-                    JumpInput(false); // Reset jump
+                    leapMotionJump = true; // Trigger jump
+					return;
                 }
             }
-            else
-            {
-                JumpInput(false); // Reset jump if no hands are detected
-            }
+
+			// reset jump if no hands are detected    
+			leapMotionJump = false;
         }
 
 #if ENABLE_INPUT_SYSTEM
@@ -85,12 +95,24 @@ namespace StarterAssets
 		public void OnJump(InputValue value)
 		{
 			JumpInput(value.isPressed);
+			//spacebarJump = value.isPressed;
 		}
 
 		public void OnSprint(InputValue value)
 		{
 			SprintInput(value.isPressed);
 		}
+
+		public void OnRotateLeft(InputValue value)
+		{
+			RotateLeftInput(value.isPressed);
+		}
+
+		public void OnRotateRight(InputValue value)
+		{
+			RotateRightInput(value.isPressed);
+		}
+
 #endif
 
 
@@ -112,6 +134,16 @@ namespace StarterAssets
 		public void SprintInput(bool newSprintState)
 		{
 			sprint = newSprintState;
+		}
+
+		public void RotateLeftInput(bool isPressed)
+		{
+			rotateLeft = isPressed;
+		}
+
+		public void RotateRightInput(bool isPressed)
+		{
+			rotateRight = isPressed;
 		}
 
 		private void OnApplicationFocus(bool hasFocus)
