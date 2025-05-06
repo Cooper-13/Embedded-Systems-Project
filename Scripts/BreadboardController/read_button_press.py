@@ -21,8 +21,8 @@ BUTTON_R = "R"
 INPUT_A = "a"
 INPUT_W = "w"
 INPUT_D = "d"
-INPUT_L = "l"
-INPUT_R = "r"
+INPUT_L = "j"
+INPUT_R = "k"
 
 buttonInputMap = {BUTTON_A : INPUT_A, BUTTON_W: INPUT_W, BUTTON_D: INPUT_D, BUTTON_L: INPUT_L, BUTTON_R: INPUT_R}
 
