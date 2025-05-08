@@ -27,6 +27,12 @@ namespace StarterAssets
 		private bool leapMotionJump = false; // Tracks Leap Motion jump state
         private bool spacebarJump = false;   // Tracks spacebar jump state
 
+		private float leapJumpCooldown = 0.5f;   // Cooldown between jumps
+		private float leapJumpTimer = 0f;        // Timer for cooldown
+		private bool wasGrabbingLastFrame = false;  // Tracks grab state
+
+
+
 		private void Awake()
         {
             // Get the Leap Motion provider
@@ -41,46 +47,53 @@ namespace StarterAssets
 
 		private void Update()
 		{
-			// Check for hand gesture to trigger jump
-			if (_leapServiceProvider != null && _leapServiceProvider.IsConnected()) {
+			if (_leapServiceProvider != null && _leapServiceProvider.IsConnected())
+			{
+				if (leapJumpTimer > 0f)
+				{
+					leapJumpTimer -= Time.deltaTime;
+				}
+
 				CheckLeapMotionGesture();
-			} else {
+			}
+			else
+			{
 				leapMotionJump = false;
+				wasGrabbingLastFrame = false;
 			}
 
-			// Trigger jump if either source activated it this frame
 			jump = leapMotionJump || spacebarJump;
 
-			// Reset after use (so jump only lasts one frame)
+			// Reset after 1 frame
 			leapMotionJump = false;
 			spacebarJump = false;
 		}
 
+
         private void CheckLeapMotionGesture()
-        {
-            // if (_leapServiceProvider == null) return;
+		{
+			Frame frame = _leapServiceProvider.CurrentFrame;
 
-			// if(!_leapServiceProvider.IsConnected()) return;
+			if (frame.Hands.Count > 0)
+			{
+				Hand hand = frame.Hands[0];
+				bool isGrabbingNow = hand.GrabStrength > 0.9f;
 
-            // Get the current frame from the Leap Motion controller
-            Frame frame = _leapServiceProvider.CurrentFrame;
+				// Trigger only if it's a *new* grab and cooldown expired
+				if (isGrabbingNow && !wasGrabbingLastFrame && leapJumpTimer <= 0f)
+				{
+					leapMotionJump = true;
+					leapJumpTimer = leapJumpCooldown;
+				}
 
-            // Check if there is at least one hand detected
-            if (frame.Hands.Count > 0)
-            {
-                Hand firstHand = frame.Hands[0]; // Get the first detected hand
+				wasGrabbingLastFrame = isGrabbingNow;
+			}
+			else
+			{
+				wasGrabbingLastFrame = false;
+			}
+		}
 
-                // Example gesture: Check if the hand is gripped
-                if (firstHand.GrabStrength > 0.9f) // Adjust thresholds as needed
-                {
-                    leapMotionJump = true; // Trigger jump
-					return;
-                }
-            }
-
-			// reset jump if no hands are detected    
-			leapMotionJump = false;
-        }
 
 #if ENABLE_INPUT_SYSTEM
 		public void OnMove(InputValue value)
