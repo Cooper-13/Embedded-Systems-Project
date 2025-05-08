@@ -3720,8 +3720,9 @@ GameObject:
   - component: {fileID: 1030981316}
   - component: {fileID: 1030981315}
   - component: {fileID: 1030981321}
+  - component: {fileID: 1030981322}
   m_Layer: 0
-  m_Name: Basket Star
+  m_Name: Real Star 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3943,6 +3944,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasCompletedEvent: 0
+--- !u!114 &1030981322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1030981314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5351af33a87f24fc58634a9958915271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1034557748
 GameObject:
   m_ObjectHideFlags: 0
@@ -4479,8 +4492,9 @@ GameObject:
   - component: {fileID: 1140505087}
   - component: {fileID: 1140505092}
   - component: {fileID: 1140505093}
+  - component: {fileID: 1140505094}
   m_Layer: 0
-  m_Name: Mug Star
+  m_Name: Real Star 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4715,6 +4729,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasCompletedEvent: 0
+--- !u!114 &1140505094
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140505085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5351af33a87f24fc58634a9958915271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1141788294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5154,8 +5180,9 @@ GameObject:
   - component: {fileID: 1245065558}
   - component: {fileID: 1245065557}
   - component: {fileID: 1245065563}
+  - component: {fileID: 1245065564}
   m_Layer: 0
-  m_Name: Tunnel Star
+  m_Name: Real Star 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5377,6 +5404,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasCompletedEvent: 0
+--- !u!114 &1245065564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1245065556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5351af33a87f24fc58634a9958915271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1252871919
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8005,8 +8044,9 @@ GameObject:
   - component: {fileID: 1914362222}
   - component: {fileID: 1914362221}
   - component: {fileID: 1914362227}
+  - component: {fileID: 1914362228}
   m_Layer: 0
-  m_Name: Maze Star
+  m_Name: Real Star 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8228,6 +8268,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasCompletedEvent: 0
+--- !u!114 &1914362228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1914362220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5351af33a87f24fc58634a9958915271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1920223653
 GameObject:
   m_ObjectHideFlags: 0
@@ -11169,6 +11221,7 @@ GameObject:
   - component: {fileID: 3184838810748799480}
   - component: {fileID: 5454835798872055697}
   - component: {fileID: 679318115}
+  - component: {fileID: 7336787687053581384}
   m_Layer: 8
   m_Name: Robot
   m_TagString: Player
@@ -11364,6 +11417,18 @@ Transform:
   - {fileID: 2471043611982975280}
   m_Father: {fileID: 357295196}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &7336787687053581384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6863122389611397849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b7ce1500969c458cbfa528abd8b86c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7338476846671403151
 GameObject:
   m_ObjectHideFlags: 0
@@ -12005,8 +12070,9 @@ GameObject:
   - component: {fileID: 8672455881319325506}
   - component: {fileID: 8672455881319325505}
   - component: {fileID: 8672455881319325508}
+  - component: {fileID: 8672455881319325509}
   m_Layer: 0
-  m_Name: Arch Star
+  m_Name: Real Star 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12160,6 +12226,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasCompletedEvent: 0
+--- !u!114 &8672455881319325509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8672455881319325504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5351af33a87f24fc58634a9958915271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &8807975795467394269
 Transform:
   m_ObjectHideFlags: 0

@@ -1638,8 +1638,9 @@ GameObject:
   - component: {fileID: 176759583}
   - component: {fileID: 176759588}
   - component: {fileID: 176759589}
+  - component: {fileID: 176759590}
   m_Layer: 0
-  m_Name: Dresser Maze Star
+  m_Name: Star 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1873,6 +1874,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasCompletedEvent: 0
+--- !u!114 &176759590
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 176759581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5351af33a87f24fc58634a9958915271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &177672267 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1792912681060396717, guid: 4e59ffe67e168564eb989e989adde9b5,
@@ -3650,8 +3663,9 @@ GameObject:
   - component: {fileID: 417663986}
   - component: {fileID: 417663985}
   - component: {fileID: 417663991}
+  - component: {fileID: 417663992}
   m_Layer: 0
-  m_Name: High Bed Star
+  m_Name: Star 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3873,6 +3887,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasCompletedEvent: 0
+--- !u!114 &417663992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 417663984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5351af33a87f24fc58634a9958915271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &420709724 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1792912681060396717, guid: 4e59ffe67e168564eb989e989adde9b5,
@@ -8110,8 +8136,9 @@ GameObject:
   - component: {fileID: 943656784}
   - component: {fileID: 943656783}
   - component: {fileID: 943656788}
+  - component: {fileID: 943656789}
   m_Layer: 0
-  m_Name: Book Star
+  m_Name: Star 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8333,6 +8360,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasCompletedEvent: 0
+--- !u!114 &943656789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 943656781}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5351af33a87f24fc58634a9958915271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &944329637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12564,8 +12603,9 @@ GameObject:
   - component: {fileID: 1385098951}
   - component: {fileID: 1385098950}
   - component: {fileID: 1385098955}
+  - component: {fileID: 1385098956}
   m_Layer: 0
-  m_Name: Basket Star
+  m_Name: Star 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12787,6 +12827,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasCompletedEvent: 0
+--- !u!114 &1385098956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1385098948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5351af33a87f24fc58634a9958915271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1389999916 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1792912681060396717, guid: 4e59ffe67e168564eb989e989adde9b5,
@@ -13798,8 +13850,9 @@ GameObject:
   - component: {fileID: 1533739445}
   - component: {fileID: 1533739444}
   - component: {fileID: 1533739449}
+  - component: {fileID: 1533739450}
   m_Layer: 0
-  m_Name: Behind Sofa Star
+  m_Name: Star 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14021,6 +14074,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hasCompletedEvent: 0
+--- !u!114 &1533739450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1533739442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5351af33a87f24fc58634a9958915271, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1544612642
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21201,6 +21266,7 @@ GameObject:
   - component: {fileID: 3184838810748799480}
   - component: {fileID: 5454835798872055697}
   - component: {fileID: 679318115}
+  - component: {fileID: 7336787687053581384}
   m_Layer: 8
   m_Name: Robot
   m_TagString: Player
@@ -21381,6 +21447,18 @@ Transform:
   - {fileID: 2471043611982975280}
   m_Father: {fileID: 357295196}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &7336787687053581384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6863122389611397849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b7ce1500969c458cbfa528abd8b86c3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7338476846671403151
 GameObject:
   m_ObjectHideFlags: 0

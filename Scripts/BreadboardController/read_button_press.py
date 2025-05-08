@@ -11,7 +11,7 @@ pyautogui.FAILSAFE = False
 pollTime = 0.05
 
 HOST = "192.168.7.1"
-PORT = 8081
+PORT = 8080
 
 BUTTON_A = "A"
 BUTTON_W = "W"
