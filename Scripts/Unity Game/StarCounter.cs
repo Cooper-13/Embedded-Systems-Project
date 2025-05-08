@@ -54,11 +54,11 @@ public class Collectible : MonoBehaviour
             }
             if (currentSceneIndex == 2){
                 if (gameObject.name.Contains("Real")) {
-                    if (collectedCount <= 2){
+                    if (collectedCount < 2){
                         Debug.Log("Star collected! Look for the other real star within the maze...");
                     }        
                     Destroy(gameObject);
-                    if (collectedCount > 2 ){
+                    if (collectedCount >= 2 ){
                         collectedCount = 0; // Reset the counter
                         int nextSceneIndex = (currentSceneIndex +1);
                         Debug.Log("You collected all the stars! Loading final scene...");
