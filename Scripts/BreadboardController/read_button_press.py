@@ -5,12 +5,13 @@ import time
 
 #pyautogui usually waits after a function call; make it not do that
 pyautogui.PAUSE = 0
+pyautogui.FAILSAFE = False
 
 #Time to wait between polls
 pollTime = 0.05
 
 HOST = "192.168.7.1"
-PORT = 8080
+PORT = 8081
 
 BUTTON_A = "A"
 BUTTON_W = "W"
