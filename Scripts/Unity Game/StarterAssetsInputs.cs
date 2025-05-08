@@ -39,18 +39,22 @@ namespace StarterAssets
 			
         }
 
-        private void Update()
-        {
-            // Check for hand gesture to trigger jump
+		private void Update()
+		{
+			// Check for hand gesture to trigger jump
 			if (_leapServiceProvider != null && _leapServiceProvider.IsConnected()) {
 				CheckLeapMotionGesture();
 			} else {
 				leapMotionJump = false;
 			}
 
+			// Trigger jump if either source activated it this frame
 			jump = leapMotionJump || spacebarJump;
-            
-        }
+
+			// Reset after use (so jump only lasts one frame)
+			leapMotionJump = false;
+			spacebarJump = false;
+		}
 
         private void CheckLeapMotionGesture()
         {
@@ -67,7 +71,7 @@ namespace StarterAssets
                 Hand firstHand = frame.Hands[0]; // Get the first detected hand
 
                 // Example gesture: Check if the hand is gripped
-                if (firstHand.GrabStrength > 0.8f) // Adjust thresholds as needed
+                if (firstHand.GrabStrength > 0.9f) // Adjust thresholds as needed
                 {
                     leapMotionJump = true; // Trigger jump
 					return;
@@ -94,8 +98,10 @@ namespace StarterAssets
 
 		public void OnJump(InputValue value)
 		{
-			JumpInput(value.isPressed);
-			//spacebarJump = value.isPressed;
+			if (value.isPressed)
+			{
+				spacebarJump = true;
+			}
 		}
 
 		public void OnSprint(InputValue value)
